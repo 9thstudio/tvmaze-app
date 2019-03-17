@@ -1,0 +1,33 @@
+.header{
+    background-color:#44A1A5;
+    height: 100px;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.title{
+    font-size: 30px;
+}
+.sub-title{
+    font-size: 20px;
+}
+.search-bar{
+    width: 50%;
+    button{
+        padding: 7px 20px;
+        font-size: 14px;
+        margin-left: 10px;
+        border-radius: 5px;
+
+    }
+    input{
+        font-size: 16px;
+        padding: 5px;
+        border-radius: 5px;
+
+    }
+}

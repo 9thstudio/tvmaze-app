@@ -1,0 +1,24 @@
+<div class="show-list">
+  <div class="filter-box">
+    <input type="text" placeholder="Filter Shows" [(ngModel)]="filterByNetwork" />
+    OR filter by
+    <button (click)="filterShowListBy('Disney Channel')">Disney Channel</button>
+    <button (click)="filterShowListBy('Disney XD')">Disney XD</button>
+    <button (click)="filterShowListBy('Nickelodeon')">Nickelodeon</button>
+    <button (click)="filterShowListBy('CBS')">CBS</button>
+  </div>
+  <ul>
+    <ng-template ngFor let-item [ngForOf]="showSchedule | filterShowList: filterByNetwork">
+      <li *ngIf="item?.show?.image?.medium">
+        <img src="{{item.show.image.medium}}">
+        <div>Title: {{item?.name}}</div>
+        <div>Season: {{item?.season}}</div>
+        <div>Channel: {{item?.show?.network?.name}}</div>
+        <div>Schedule: {{item?.airstamp | date: 'MM/dd/yy h:mm a'}}</div>
+        <div>Length: {{item?.runtime}}</div>
+        
+      </li>
+
+    </ng-template>
+  </ul>
+</div>

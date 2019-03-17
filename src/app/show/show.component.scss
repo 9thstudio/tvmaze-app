@@ -1,0 +1,48 @@
+.show-list {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+        padding: 0
+    }
+    li {
+        margin: 10px;
+        background-color: #EDEDED;
+        padding: 5px;
+        border: 1px solid #cccccc;
+        text-decoration: none;
+        list-style: none;
+        width: 200px;
+    }
+    img {
+        max-width: 100%;
+    }
+    .filter-box {
+        text-align: center;
+        input {
+            font-size: 16px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    }
+    input::placeholder {
+        color: #cccccc;
+    }
+    input:focus::placeholder {
+        color: transparent;
+    }
+    button {
+        margin: 5px;
+        padding: 5px 10px;
+        font-size: 16px;
+        border-radius: 10px;
+        background: #EDEDED;
+    }
+    button:focus {
+        outline: 0px;
+    }
+    button:hover {
+        background: #CEE3E4;
+    }
+}
