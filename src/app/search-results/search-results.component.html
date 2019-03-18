@@ -1,0 +1,16 @@
+
+<div>
+    <ul>
+      <ng-template ngFor let-item [ngForOf]="showSearchList"  let-last="last">
+        <li *ngIf="item?.show?.image?.medium">
+          <img src="{{item.show.image.medium}}">
+          <div>Title: {{item?.show?.name}}</div>
+          <div>Genre: {{item?.show?.genres[0]}}</div>
+          <div>Network: {{item?.show?.network?.name}}</div>
+          <div>Schedule: {{item?.show?.schedule?.days[0]}} - {{item?.show?.schedule?.time}}</div>
+        </li>
+      </ng-template>
+    </ul>
+    <div *ngIf="!showNoResult" class="noResult">No Results Found</div>
+
+  </div>

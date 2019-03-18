@@ -1,31 +1,26 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { ShowComponent } from './show/show.component';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
+import {ShowComponent} from './show/show.component';
+import {SearchResultsComponent} from './search-results/search-results.component';
 
-const routes: Routes = [
-  {
-    path: 'hp101/:id',
-    component: HomeComponent,
-  },
+const routes : Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'schedule',
     pathMatch: 'full'
-  },
-  {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
-    path: 'home/:schedule',
+
+  }, {
+    path: 'schedule',
     component: ShowComponent
+  }, {
+    path: 'search/:q',
+    component: SearchResultsComponent
   }
-  
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -1,11 +1,12 @@
 <div class="header">
-    <div>
+    <div class="title-holder">
         <div class="title">TV MAZE</div>
-        <div class="sub-title">TV Show schedules and much more</div>
+        <div class="sub-title">TV Shows & Schedules</div>
     </div>
     <div class="search-bar">
-        <input type="text" />
-        <button>Search Show</button>
+        <input placeHolder="Search Shows" type="text" [(ngModel)]='searchParam' [value]='searchParam' (keyup.enter)="searchShows(searchParam)" />
+        <button (click)="searchShows(searchParam)" [disabled]= "!searchParam">Search Show</button>
+        <button (click)="showSchedule()">Schedules</button>
     </div>
 
 </div>

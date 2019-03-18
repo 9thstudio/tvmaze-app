@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-header',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  searchParam: string;
+  constructor( 
+    private router: Router
+    ) { }
 
   ngOnInit() {
+  }
+
+  searchShows(urlParam:string) {
+    this.router.navigate(['search/'+urlParam]);
+  }
+  showSchedule() {
+    this.router.navigate(['schedule']);
   }
 
 }
