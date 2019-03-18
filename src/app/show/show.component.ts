@@ -23,12 +23,10 @@ export class ShowComponent implements OnInit {
   showConfig() {
     this.configService.getConfig()
       .subscribe((data) => {
-        console.log(data)
         this.showSchedule = data;
       });
   }
   filterShowListBy(filterName: string){
-    console.log(filterName)
     this.filterByNetwork = filterName;
   }
 

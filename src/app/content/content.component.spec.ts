@@ -21,10 +21,7 @@ describe('ContentComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create Content Component ', () => {
-    // expect(HeaderComponent).toBeTruthy();
-    const component: ContentComponent = new ContentComponent();
-    // expect(component).toBeDefined();
+  it('should create', () => {
     expect(component ).toBeTruthy();
   });
 });

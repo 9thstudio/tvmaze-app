@@ -29,7 +29,6 @@ export class SearchResultsComponent implements OnInit {
       .subscribe((data) => {
         this.showSearchList = data;
         this.showNoResult = this.showSearchList.length < 1 ? false : true;
-        console.log(this.showNoResult)
       });
   }
 

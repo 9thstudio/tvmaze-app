@@ -11,6 +11,7 @@ import { FilterShowListPipe } from './filter-show-list.pipe';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { RouterModule } from '@angular/router';
 
+
 @NgModule({
   declarations: [
     AppComponent,
