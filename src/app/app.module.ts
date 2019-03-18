@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ShowComponent } from './show/show.component';
 import { FilterShowListPipe } from './filter-show-list.pipe';
 import { SearchResultsComponent } from './search-results/search-results.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
